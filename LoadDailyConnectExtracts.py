@@ -76,7 +76,7 @@ for root, dirs, files in os.walk(rootPath):
 
             fullFile = root + filename
             archiveDatePath = ''
-            with open(fullFile) as f:
+            with open(fullFile, encoding="utf8") as f:
                 data = json.load(f)
                 for v in data:
                     archiveDatePath = archivePath + str(v['Pdt']) + '/'
